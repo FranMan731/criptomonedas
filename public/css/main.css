@@ -1,0 +1,400 @@
+
+main{
+    width: 100%;
+}
+
+/*-------- Caracteristicas -----------*/
+.characteristics{
+    width: 100%;
+    background-color: #FFFFFF;
+}
+
+.characteristics .container-car{
+    display: flex;
+    flex-wrap:wrap; 
+    justify-content:center;
+    width: 100%;
+    margin: auto;
+    max-width: 1200px;
+    padding-bottom: 70px;
+}
+
+.characteristics .container-car .characteristic{
+    width: 300px;
+    margin: 10px;
+    /*background-color: blue;*/
+    padding-top: 80px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+
+.characteristics .container-car .characteristic h3{
+    color: #333333;
+}
+
+.characteristics .container-car .characteristic svg{
+   position: relative;
+   left: 50%;
+   transform: translateX(-50%);
+   margin: 20px 0;
+}
+
+.characteristics .container-car .characteristic p{
+    font-size: 1.20rem;
+    font-weight: 300;
+    color: #000;
+}
+
+/*-------- ----------- -----------*/
+
+/*-------- Clientes -----------*/
+
+.customers{
+    width: 100%;
+    background-image: linear-gradient(-45deg,#134e5e,#71b280);
+    padding-bottom: 40px;
+}
+
+.customers .container-cus{
+    width: 100%;
+    margin: auto;
+    max-width: 1200px;
+    padding-top: 50px;
+}
+
+.customers .container-cus h3{
+    font-size: 2rem;
+}
+
+.customers .container-cus .customers-opinions{
+    display:flex;
+    width: 100%;
+    /*height: 500px;*/
+    /*background-color: red;*/
+}
+
+.customers .container-cus .customers-opinions .ctrl-left,.customers .container-cus .customers-opinions .ctrl-right{
+    display:flex;
+    align-items:center; 
+    width: 5%;
+    /*height: 100%;*/
+    /*background-color: blue;*/
+}
+
+.customers .container-cus .customers-opinions .ctrl-left{
+    justify-content:flex-end;
+}
+
+.customers .container-cus .customers-opinions .ctrl-left i,.customers .container-cus .customers-opinions .ctrl-right i{
+    font-size: 2.8rem;
+    color: white;
+}
+
+.customers .container-cus .customers-opinions .opinions{
+    display: flex; 
+    justify-content:center; 
+    flex-wrap:wrap;
+    width: 90%;
+    padding: 30px 0;
+    /*background-color: black;*/
+}
+
+.customers .container-cus .customers-opinions .opinions .container-op{
+    width: 420px;
+    /*height: 200px;*/
+    border-radius: 7px;
+    background-color: white; 
+    margin: 10px;
+    padding: 10px;
+}
+
+.customers .container-cus .customers-opinions .opinions .container-op .cus-perfil{
+    display:flex;
+    justify-content:space-around;
+    
+    padding: 10px;
+       /*background-color: red;*/
+}
+
+.cus-name{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.customers .container-cus .customers-opinions .opinions .container-op .cus-perfil .img-cus-container{
+    width: 45px;
+    height: 45px;
+    border:1px solid #000;
+    /*background-color: blue;*/
+    overflow: hidden;
+}
+
+.customers .container-cus .customers-opinions .opinions .container-op .cus-op{
+    display:flex;
+    flex-direction:column;
+    
+    padding: 20px;
+    color: black;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    /*background-color: red;*/
+}
+
+.op{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.date{
+    padding-top: 20px;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 1rem;
+}
+
+.controls-slide{
+    display:flex;
+    justify-content:center;
+    width: 100%;
+    /*padding: 20px;*/
+    /*background-color: red;*/
+}
+
+.ctrl{
+    display:flex;
+    justify-content:center;
+    align-items:center; 
+    width: 18px;
+    height: 18px;
+    margin: 0 10px;
+    border-radius: 50%;
+    /*background-color: blue;*/
+    border: 3px solid #D3D3D3;
+    cursor: pointer;
+}
+
+.ctrl .mini-ctrl{
+    width: 8px;
+    height: 8px;
+    background-color: #00CF70;
+    border-radius: inherit;
+}
+
+/*-------- --------- -----------*/
+
+/*-------- Sign -----------*/
+.container-sign {
+    margin: 60px 0;
+}
+.form-control.register {
+    height: 40px;
+    padding: 0 10px;
+    font-size: 1.3rem; 
+    border:1px solid rgba(0,0,0,.3);
+}
+.g-recaptcha {
+    margin-left: 25%;
+}
+
+.btn-register {
+    font-size: 1.6rem !important;
+}
+
+/* ------------------------------ */
+/* --------------- MAIN VENDER ----------------- */
+.form-vender {
+    margin-top: 10px;
+}
+
+/* Contenido de vender */
+.col-md-8 > .content-form {
+    background-color: white !important;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12) !important;
+}
+
+span.titulo-confirmar {
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: darkcyan;
+}
+
+span.valor-confirmar {
+    font-size: 1.4rem;
+}
+/*--------------- MAIN view Comprar ---------------*/ 
+
+.data-table{
+    width: 100%;
+    background-color: white;
+}
+.data-table .container-data-table{
+    display:flex;
+    justify-content:center;
+    
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    /*background-color: red;*/
+}
+
+.data-table .container-data-table .cell-table{
+    position: relative;
+    display:flex;
+    flex-direction:column;
+    align-items:center; 
+    
+    padding: 10px 40px;
+    cursor: pointer;
+}
+
+.data-table .container-data-table .cell-table:hover i{
+    color: #0ED97C;
+}
+
+.data-table .container-data-table .cell-table::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color:transparent;
+}
+
+.data-table .container-data-table .cell-table:hover::after{
+    background-color:#0ED97C;
+}
+
+.data-table .container-data-table .cell-table i{
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color:#D3D3D3;
+}
+
+/* BOTON MERCADO PAGO */
+a.btn.btn-primary.btn-mp {
+    border-radius: 13px !important;
+    width: 150px !important;
+    height: 25px;
+    padding: .175rem .75rem;
+}
+
+/* Tabla de Compra */
+.col-md-8 > .content-form {
+
+}
+/*Tabla header */
+select.form-control:not([size]):not([multiple]) {
+    height: calc(2.25rem + 2px) !important;
+}
+div#tblCompras_filter label {
+    display: flex !important;
+    justify-content: flex-end;
+}
+.panel-tabla {
+    background-color: white;
+    padding: 15px 15px;
+}
+/* Colores de paginacion*/
+.page-item.disabled .page-link {
+    color: #6c757d !important;
+}
+.wizard > .content > .body ul.pagination {
+    list-style: none !important;
+}
+.page-item.active .page-link {
+    color: white !important;
+}
+.page-link {
+    color: #007bff !important;
+}
+#tblCompras tbody tr {
+    cursor: pointer;
+}
+
+/*Color de selecciono */
+span.select-item {
+    color: darkblue;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+/*Alert Billetera */
+div#alertErrorTabla {
+    margin-bottom: 0px;
+    margin-top: 20px;
+}
+/*Label Pagar */
+section#compraCriptomoneda-p-2 {
+    text-align: center;
+}
+
+ul.dtr-details > li {
+    display: flex !important;
+}
+section#compraCriptomoneda-p-0 {
+    padding-left: 15px;
+}
+
+/*FIN TABLA DE COMPRA */
+
+/* PAGINA REGISTRAR */
+.content-register {
+    background-color: white;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12) !important;
+}
+
+@media(max-width:720px){
+    .g-recaptcha {
+        margin-left: 0px;
+    }
+}
+
+@media(max-width:540px){
+    .g-recaptcha {
+        margin-left: 0px;
+        transform:scale(0.77);
+        -webkit-transform:scale(0.77);
+        transform-origin:0 0;
+        -webkit-transform-origin:0 0;
+    }
+}
+
+@media screen and (max-width: 240px){
+    .g-recaptcha {
+        margin-left: 0px;
+        transform:scale(0.50);
+        -webkit-transform:scale(0.50);
+        transform-origin:0 0;
+        -webkit-transform-origin:0 0;
+    }
+}
+
+@media(max-width:360px){
+    .col-sm-12 {
+        padding-left: 5px !important;
+        margin-right: 5px !important;
+    }
+    .wizard > .steps .done a, .wizard > .steps .done a:hover, .wizard > .steps .done a:active {
+        text-align: center !important;
+    }
+
+    .wizard > .steps a, .wizard > .steps a:hover, .wizard > .steps a:active {
+        text-align: center;
+    }
+
+    .wizard > .steps .number {
+        margin-right: 0px !important;
+        margin-bottom: 5px;
+        width: 26px;
+        height: 26px;
+        font-size: 1em;
+    }
+}

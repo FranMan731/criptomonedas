@@ -1,0 +1,241 @@
+
+header{
+    position: relative;
+    width: 100%;
+    /*height: 800px;*/
+    background-image: url(../img/wallpapers/space.png);
+    background-size: cover;
+}
+header .filter{
+   background-color: rgba(17,33,46,.7);
+}
+
+header .menu{
+    position: relative;
+    z-index: 2;
+    display: flex;
+    /*flex-direction:column;*/
+    justify-content:space-between;
+    width: 100%;
+    max-width: 1200px;
+    height: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+    /*min-height: 84px;*/
+    background-color: transparent !important;
+    /*background-color: transparent;*/
+   /* box-shadow: 0 20px 100px 50px #102230;*/
+}
+header .menu .logo{
+    display:flex;
+    align-items:center; 
+    font-size: 2rem !important;
+    letter-spacing: 2px !important;
+    font-weight: 300 !important;
+    width: 20%;
+    height: 100%;
+    /*background-color: blue;*/
+}
+
+header .menu .menu-nav{
+    
+    display:flex;
+    justify-content:center;
+    align-items:center; 
+    
+    transition:transform 1s;
+    /*background-color: violet;*/
+}
+header .menu .menu-nav a{
+    display:flex;
+    align-items:center; 
+    height: 60%;
+    /*margin-right: 10px;*/
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    font-size: 1rem;
+    /*background-color: greenyellow;*/
+    /*color: white;*/
+}
+
+header .menu .menu-nav a.dropdown-item {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+}
+
+.log-sign-a{
+    position: relative;
+    font-weight:bold;
+    font-size: 1.5rem;
+    
+}
+
+.log-sign-a::after{
+    position: absolute;
+    bottom: 0;
+    content: "";
+    left: 0;
+    width: 90%;
+    height: 4px;
+    background-color: transparent;
+    transition: background-color .3s;
+}
+
+.log-sign-a:hover::after{
+    background-color: #10D078;
+}
+
+.menu-btn{
+    display:none;
+    justify-content:center;
+    align-items:center; 
+    
+    width: 40px;
+    height: 40px;
+    margin-top: 15px;
+    border: 2px solid white;
+    /*background-color: white;*/
+    border-radius: 50%;
+}
+
+.menu-btn:active{
+    background-color: rgba(225,225,225,.5)
+}
+
+.menu-btn:hover{
+    cursor:pointer;
+}
+.menu-btn .linea-btn-menu{
+    position: relative;
+    width: 70%;
+    height: 2px;
+    background-color: white;
+}
+.menu-btn .linea-btn-menu::before,.menu-btn .linea-btn-menu::after{
+    content: "";
+    position: absolute;
+    
+    left: 0;
+    
+    width: 100%;
+    height: 100%;
+}
+.menu-btn .linea-btn-menu::before{
+    top: -7px;
+    background-color: white;
+}
+.menu-btn .linea-btn-menu::after{
+    top: 7px;
+    background-color: white;
+}
+
+.icon-home{
+   font-size: 40px;
+   color: #10C172;
+   margin: 0 20px;
+}
+
+header .home{
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 150px 20px;
+    /*background-color: rgba(17,33,46,.7);*/
+}
+header .home h3{
+    margin-top: 30px;
+}
+header .home button{
+    margin-top: 40px;
+}
+
+/* -------------- Header Vista Comprar ------------*/
+
+.no-shadow{
+    box-shadow: none!important;
+}
+
+/* -------------- Media Queries  ------------*/
+@media(max-width:990px){
+    .menu-btn{
+        display: flex;
+    }
+    
+    header .menu .menu-nav{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        transform: translateX(-100%);
+        
+        flex-direction:column;
+        justify-content:flex-start;
+        width: 100%;
+        /*height: 100vh;*/
+        padding: 20px;
+        
+        background-color:#102230;
+    }
+    
+    header .menu .menu-nav a{
+        align-items:flex-start;
+        margin: 20px 0;
+        padding: 10px 0;
+        border: none;
+        height: 10%;
+    }
+
+    div#menuDerecho {
+        background-color: #102230!important;
+        margin: 0 -20px;
+        padding: 0 16px !important;
+    }
+    
+    li.nav-item.active {
+        text-align: center;
+    }
+
+    a#btnUsuario {
+        text-align: center;
+    }
+
+    .navbar-nav .dropdown-menu {
+        float: left !important;
+        margin-bottom: 10px;
+        margin-left: 35%;
+    }
+}
+
+@media(max-width:380px){
+    .icon-home {
+        font-size: 20px;
+    }
+
+    header .menu .logo{
+        letter-spacing: 0px !important;
+        font-size: 1.5rem !important;
+    }
+
+    div#menuDerecho {
+        background-color: #102230!important;
+        margin: 0 -20px;
+        padding: 0 16px !important;
+    }
+    
+    li.nav-item.active {
+        text-align: center;
+    }
+
+    a#btnUsuario {
+        text-align: center;
+    }
+
+    .navbar-nav .dropdown-menu {
+        float: left !important;
+        margin-bottom: 10px;
+        margin-left: 22%;
+    }
+}

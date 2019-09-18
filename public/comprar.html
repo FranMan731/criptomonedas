@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Criptomonedas</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,300i,400,400i,700,700i" rel="stylesheet">
+    <link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/general.css" rel="stylesheet" type="text/css" />
+    <link href="css/header.css" rel="stylesheet" type="text/css" />
+    <link href="css/main.css" rel="stylesheet" type="text/css" />
+    <link href="css/footer.css" rel="stylesheet" type="text/css" />
+    <!--alerts CSS -->
+    <link href="vendors/sweetalert/dist/sweetalert.css" rel="stylesheet" type="text/css">
+    <!-- Bootstrap CSS -->
+    <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <!-- Data-Table CSS -->
+    <link rel="stylesheet" type="text/css" href="vendors/datatables/datatables.min.css" />
+    <!-- jquery-steps css -->
+    <link rel="stylesheet" href="vendors/jquery.steps/demo/css/jquery.steps.css">
+    <script src="https://www.paypalobjects.com/api/checkout.js"></script>
+</head>
+
+<body class="background-grey">
+    <header class="background-dark">
+        <nav class="navbar navbar-expand-lg menu navbar-dark bg-dark">
+            <a class="navbar-brand logo" href="/">
+                        <i class="icon-home fa fa-rocket"></i>
+                        Criptomonedas
+                    </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuDerecho" aria-controls="menuDerecho" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menuDerecho">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link font-weight-300" href="vender.html">¿Quieres vender?</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link border-r-small font-weight-300" href="javascript:void(0)">¿Quieres comprar?</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a id="btnIngresar" data-toggle="modal" data-target="#mdlIngresar" class="nav-link font-weight-300" href="javascript:void(0)">Ingresar</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a id="btnRegister" class="nav-link font-weight-300" href="/registrar.html">Registrar</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a id="btnUsuario" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="panel.html">Panel de control</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#" id="btnCerrarSesion">Cerrar sesión</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="formVender" class="container form-vender">
+            <div class="row">
+                <div class="offset-md-2 col-xs-12 col-sm-12 col-md-8">
+                    <div class="content-form">
+                        <div id="compraCriptomoneda">
+                            <h3>Elegir</h3>
+                            <section class="container panel-tabla">
+                                <table id="tblCompras" class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Tipo</th>
+                                            <th>Cantidad</th>
+                                            <th>Precio</th>
+                                            <th>Usuario</th>
+                                            <th>Fecha</th>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                            <th>Tipo</th>
+                                            <th>Cantidad</th>
+                                            <th>Precio</th>
+                                            <th>Usuario</th>
+                                            <th>Fecha</th>
+                                        </tr>
+                                    </tfoot>
+                                    <tbody>
+                                    </tbody>
+                                </table>
+                                <div id="alertErrorTabla" class="alert alert-danger" role="alert" style="display: none">
+                                </div>
+                            </section>
+                            <h3>Billetera</h3>
+                            <section>
+                                <form>
+                                    <div class="form-group">
+                                        <label for="txtBilleteraCompra">Ingrese dirección de la billetera</label>
+                                        <input type="text" placeholder="Ejemplo: https://blockchain.info/address/1ByMwasdvKpwufddNGpHcXfXnytajBKJ" class="form-control" id="txtBilleteraCompra" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="txtPaypalCompra">Ingrese correo de Paypal</label>
+                                        <input type="text" placeholder="Ejemplo: micuentapaypal@ejemplo.com" class="form-control" id="txtPaypalCompra" required>
+                                    </div>
+                                    <div id="alertErrorCompra" class="alert alert-danger" role="alert" style="display: none">
+                                    </div>
+                                </form>
+                            </section>
+                            <h3>Pagar</h3>
+                            <section>
+                                <label>¿Desea confirmar la siguiente compra?</label>
+                                <span id="confirmarCompra"></span>
+                                <br>
+                                <div id="paypal-button"></div>
+                                <div id="mercadopago-button"></div>
+                                <br>
+
+                                <span class="alert alert-warning" id="spnResultado">Para finalizar la compra, debe pagar.</span>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container-foot">
+            <p class="font-size-x17 text-align-center">Síguenos en nuestras redes sociales</p>
+            <div class="social-networks">
+                <a><i class="fa fa-facebook"></i></a>
+                <a><i class="fa fa-twitter"></i></a>
+                <a><i class="fa fa-medium"></i></a>
+                <a><i class="fa fa-google"></i></a>
+                <a><i class="fa fa-github"></i></a>
+                <a><i class="fa fa-comments"></i></a>
+                <a><i class="fa fa-bitcoin"></i></a>
+                <a><i class="fa fa-reddit"></i></a>
+            </div>
+            <div class="copyright">
+                <a class="white-color">Términos de uso</a>
+                <p>© 2018 Criptomonedas.com</p>
+                <a class="white-color">Política de Privacidad</a>
+            </div>
+        </div>
+    </footer>
+    <!-- Modal Ingresar -->
+    <div class="modal fade" id="mdlIngresar" tabindex="-1" role="dialog" aria-labelledby="mdlIngresar" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="mdlIngresar">Ingresar a cuenta</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="txtEmailIngresar">Email:</label>
+                            <input type="email" class="form-control" id="txtEmailIngresar" placeholder="Ingrese su email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtPasswordIngresar">Contraseña:</label>
+                            <input type="password" class="form-control" id="txtPasswordIngresar" placeholder="Ingrese su contraseña">
+                        </div>
+                    </form>
+                    <div id="errorLogin" class="alert alert-warning" role="alert" style="display: none;">
+                        Email o contraseña son incorrectos.
+                    </div>
+                    <div id="errorServidor" class="alert alert-warning" role="alert" style="display: none;">
+                        Ha ocurrido un problema en el servidor, intente mas tarde.
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-4">
+                            <a class="btn btn-block" href="/registrar.html">Obtener una cuenta</a>
+                        </div>
+                        <div class="col-sm-12 col-md-8">
+                            <button id="btnLogin" type="button" class="btn btn-block btn-success">Iniciar sesión</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- jQuery -->
+    <script src="vendors/jquery.min.js"></script>
+    <!-- Sweet-Alert  -->
+    <script src="vendors/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="vendors/popper/popper.min.js"></script>
+    <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- Form Wizard JavaScript -->
+    <script src="vendors/jquery.steps.min.js"></script>
+    <!-- Data table JavaScript -->
+    <script type="text/javascript" src="vendors/datatables/datatables.min.js"></script>
+    <script src="js/inicio.js"></script>
+    <script src="js/UsuarioBind.js"></script>
+    <script src="js/Usuario.js"></script>
+    <script src="js/CompraBind.js"></script>
+    <script src="js/Compra.js"></script>
+    <!-- Configuracion de Jquery Steps -->
+    <script src="js/StepsCompra.js"></script>
+
+    <!-- Socket IO -->
+    <script src="socket.io/socket.io.js"></script>
+    <script src="js/notificacion.js"></script>
+</body>
+
+</html>

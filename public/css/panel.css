@@ -1,0 +1,76 @@
+html, body {
+	background-color: #EDF2F1 !important;
+}
+
+/* HEADER PANEL */
+.panel-option {
+	height: 70px;
+	background-color: white;
+}
+
+.table-option {
+	height: 70px;
+    display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.table-option .cell-table {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 0 10px 0 10px;
+	font-size: 1.4rem;
+	line-height: initial !important;
+	cursor: pointer;
+}
+.active {
+	color: #2147b3 !important;
+}
+.table-option .cell-table:hover{
+	color: grey;
+}
+/* FIN HEADER PANEL */
+
+/* SECCION VENTA - COMPRA */
+#section-venta, #section-compra {
+	width: 100%;
+	min-height: 100px;
+
+	margin: 20px 0;
+	padding: 20px;
+
+	background-color: white;
+	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12) !important;
+}
+
+.tit-panel {
+	font-size: 1.4rem;
+}
+
+.tit-venta {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.btn-venta {
+	color: #2e7096 !important;
+	font-size: 1.4rem !important;
+}
+.btn-venta:focus, .btn-venta:hover {
+	text-decoration: none !important;
+}
+
+.icon-venta {
+	color: #2e7096;
+	font-size: 1.8rem;
+	cursor: pointer;
+}
+
+.btn-fila {
+	border-radius: 50% !important;
+	margin-right: 5px;
+}
+
+
+/* FIN SECCION VENTA - COMPRA */

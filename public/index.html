@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Criptomonedas</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,300i,400,400i,700,700i" rel="stylesheet">
+        <!-- Styles -->
+        <link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/general.css" rel="stylesheet" type="text/css"/>
+        <link href="css/header.css" rel="stylesheet" type="text/css"/>
+        <link href="css/main.css" rel="stylesheet" type="text/css"/>
+        <link href="css/footer.css" rel="stylesheet" type="text/css"/>
+        
+        <!--alerts CSS -->
+        <link href="vendors/sweetalert/dist/sweetalert.css" rel="stylesheet" type="text/css">
+        
+        <!-- Bootstrap CSS -->
+        <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+
+        <script src='https://www.google.com/recaptcha/api.js'></script>
+    </head>
+    <body>
+        <header>
+            <div class="filter">
+                <nav class="navbar navbar-expand-lg menu navbar-dark bg-dark">
+                    <a class="navbar-brand logo" href="/">
+                        <i class="icon-home fa fa-rocket"></i>
+                        Criptomonedas
+                    </a>
+
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuDerecho" aria-controls="menuDerecho" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="menuDerecho">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link font-weight-300" href="vender.html">¿Quieres vender?</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link border-r-small font-weight-300" href="comprar.html">¿Quieres comprar?</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a id="btnIngresar" data-toggle="modal" data-target="#mdlIngresar" class="nav-link font-weight-300" href="javascript:void(0)">Ingresar</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a id="btnRegister" class="nav-link font-weight-300" href="#sign">Registrar</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a id="btnUsuario" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                  <a class="dropdown-item" href="panel.html">Panel de control</a>
+                                  <div class="dropdown-divider"></div>
+                                  <a class="dropdown-item" href="#" id="btnCerrarSesion">Cerrar sesión</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <section id="home" class="home">
+                    <h1 class="white-color subtitulo-texto">Intercambia criptomonedas
+                        <br>de la <b>mejor forma</b></h1>
+                    <h3 class="white-color subtitulo-subtexto">Compra o venda criptomonedas en <b>TRES</b> simples pasos. Es fácil y seguro.</h3>
+                    <a href="comprar.html" class="white-color circular-button">Comenzar el intercambio</a>
+                </section>
+            </div>
+        </header>
+        <main>
+            <section id="characteristics" class="characteristics">     
+                <div class="container-car">
+                    <div class="characteristic">
+                        <h3 class="text-align-center bold">Justo</h3>
+                        <svg width="210" height="225" viewBox="0 0 210 225" xmlns="http://www.w3.org/2000/svg"><title>ic_fair</title><g fill="none" fill-rule="evenodd"><path d="M68.855 15L15 68.855" fill="#0EDA7C"/><path d="M68.855 15L15 68.855" stroke-opacity=".7" stroke="#F5F5F5" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/><path d="M126.687 29.458l-97.59 97.59" fill="#0EDA7C"/><path d="M126.687 29.458l-97.59 97.59" stroke-opacity=".7" stroke="#F5F5F5" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/><path d="M185.241 43.193l-102.65 102.65" fill="#0EDA7C"/><path d="M185.241 43.193l-102.65 102.65" stroke-opacity=".7" stroke="#F5F5F5" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/><path d="M194.639 106.084L91.265 209.458" fill="#0EDA7C"/><path d="M194.639 106.084L91.265 209.458" stroke-opacity=".7" stroke="#F5F5F5" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/><path d="M164.244 90.353a5.672 5.672 0 1 1-11.344 0 5.672 5.672 0 0 1 11.344 0zM54.58 41.193a5.672 5.672 0 1 1-11.344.001 5.672 5.672 0 0 1 11.344 0zm16.386-5.672a2.521 2.521 0 1 1-5.042 0 2.521 2.521 0 0 1 5.042 0zM77.88 156.53H33.782A3.782 3.782 0 0 1 30 152.747V61.992a3.782 3.782 0 0 1 3.781-3.782h102.101a3.782 3.782 0 0 1 3.782 3.782v39.707m-100.84 15.126v-13.477" stroke="#616161" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M77.881 147.706H41.344a2.521 2.521 0 0 1-2.52-2.521v-7.336m0-60.889v-7.406a2.521 2.521 0 0 1 2.52-2.52h86.975a2.521 2.521 0 0 1 2.521 2.52v27.727" stroke="#616161" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M81.68 132.58c0 .573.013 1.14.045 1.708a26.89 26.89 0 0 1-10.513-3.48c-5.2-4.94-8.439-11.917-8.439-19.657 0-14.968 12.132-27.1 27.1-27.1 4.967 0 9.619 1.336 13.62 3.661a27.022 27.022 0 0 1 6.19 8.83c-16.097 4.084-28.002 18.674-28.002 36.038" fill="#10D078"/><path d="M81.725 134.294c-13.507-1.537-23.994-13.008-23.994-26.924 0-14.969 12.132-27.101 27.1-27.101 11.118 0 20.673 6.693 24.852 16.273M84.832 85.941v6.933m-21.744 14.811h6.933m-.564-15.375l4.902 4.902m-4.902 25.848l4.902-4.902m20.946-20.946l4.902-4.902" stroke="#616161" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M47.017 100.437h-6.303a1.26 1.26 0 0 1-1.26-1.26V85.94c0-.696.564-1.26 1.26-1.26h6.303c.696 0 1.26.564 1.26 1.26v13.235a1.26 1.26 0 0 1-1.26 1.261m0 34.664h-6.303a1.26 1.26 0 0 1-1.26-1.26v-13.235c0-.696.564-1.26 1.26-1.26h6.303c.696 0 1.26.564 1.26 1.26v13.235a1.26 1.26 0 0 1-1.26 1.26" fill="#10D078"/><path d="M43.866 97.916h-6.303a1.26 1.26 0 0 1-1.26-1.26V83.42c0-.696.564-1.26 1.26-1.26h6.303c.695 0 1.26.564 1.26 1.26v13.235c0 .696-.565 1.261-1.26 1.261zm0 34.664h-6.303a1.26 1.26 0 0 1-1.26-1.26v-13.236c0-.696.564-1.26 1.26-1.26h6.303c.695 0 1.26.564 1.26 1.26v13.235a1.26 1.26 0 0 1-1.26 1.26zm20.168 23.95v5.041H47.017m77.521-78.151v-8.193a1.89 1.89 0 0 0-1.89-1.89h-8.194m35.257 80.016c-6.681 9.9-18.003 16.412-30.846 16.412-20.536 0-37.184-16.648-37.184-37.185 0-20.537 16.648-37.185 37.184-37.185 20.537 0 37.185 16.648 37.185 37.185 0 4.414-.77 8.65-2.18 12.579M89.244 132.58c0-13.1 8.547-24.24 20.357-28.138m-16.195 43.266a29.408 29.408 0 0 1-3.693-9.86m59.882-69.086l5.348-5.347m0 5.347l-5.348-5.347" stroke="#616161" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M115.084 125.017a5.042 5.042 0 1 1-10.084 0 5.042 5.042 0 0 1 10.084 0zm16.386 16.386a5.042 5.042 0 1 1-10.084 0 5.042 5.042 0 0 1 10.085 0zm2.522-23.949l-30.253 30.252m50.421-2.521H180m-30.252 8.193h15.126m-22.059 8.193h8.824m-66.461-44.754c-.113.007-.233.007-.346.007-5.219 0-9.454-4.236-9.454-9.454 0-5.22 4.235-9.454 9.454-9.454 4.386 0 8.073 2.987 9.145 7.04" stroke="#616161" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g></svg>
+                        <p class="text-align-center">
+                            Otros servicios de comercio de criptomonedas le cobran comisiones 
+                            y tarifas de extracción. Tenemos una tarifa razonable de 0.5%.
+                        </p>
+
+                    </div>
+                    <div class="characteristic">
+                        <h3 class="text-align-center bold">Rápido</h3>
+                        <svg width="210" height="225" viewBox="0 0 210 225" xmlns="http://www.w3.org/2000/svg"><title>ic_fast</title><g fill="none" fill-rule="evenodd"><path d="M68.855 15L15 68.855" fill="#0EDA7C"/><path d="M68.855 15L15 68.855" stroke-opacity=".7" stroke="#F5F5F5" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/><path d="M126.687 29.458l-97.59 97.59" fill="#0EDA7C"/><path d="M126.687 29.458l-97.59 97.59" stroke-opacity=".7" stroke="#F5F5F5" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/><path d="M185.241 43.193l-102.65 102.65" fill="#0EDA7C"/><path d="M185.241 43.193l-102.65 102.65" stroke-opacity=".7" stroke="#F5F5F5" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/><path d="M194.639 106.084L91.265 209.458" fill="#0EDA7C"/><path d="M194.639 106.084L91.265 209.458" stroke-opacity=".7" stroke="#F5F5F5" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/><path d="M126.236 123.54h-30.85c-1.366-8.337-4.177-27.75-3.143-41.216 2.547-33.074 20.946-45.27 20.946-45.27s.663.44 1.757 1.378c5.621 6.426 13.527 18.98 15.135 39.838 1.351 17.568-3.845 45.27-3.845 45.27" fill="#10D078"/><path d="M51.607 143.888c-3.84-8.234-5.985-17.418-5.985-27.104 0-20.074 9.215-38 23.649-49.77m81.08-.001C164.784 78.783 174 96.71 174 116.783c0 35.453-28.736 64.19-64.19 64.19-22.446 0-42.2-11.52-53.674-28.971" stroke="#616161" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M121.297 123.54v3.379a4.055 4.055 0 0 1-4.054 4.054H98.324m19.595-50.676a8.108 8.108 0 1 1-16.217 0 8.108 8.108 0 0 1 16.217 0z" stroke="#616161" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M117.919 80.297a8.108 8.108 0 1 1-16.217 0 8.108 8.108 0 0 1 16.217 0zm-12.162 0a4.058 4.058 0 0 1 4.054-4.054m4.729 54.73v23.649m-9.459-23.649v11.486m9.459 12.163c0-6.344 5.143-11.487 11.487-11.487s11.487 5.143 11.487 11.487m-4.794-9.332a12.151 12.151 0 0 1 10.2-5.533 12.11 12.11 0 0 1 7.774 2.81m-3.894-2.175c1.647-6.013 7.15-10.433 13.687-10.433M98.338 146.5a11.45 11.45 0 0 0-8.122-3.365c-6.343 0-11.487 5.143-11.487 11.487" stroke="#616161" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M83.523 145.29a12.151 12.151 0 0 0-10.199-5.533 12.116 12.116 0 0 0-7.775 2.81m3.894-2.175c-1.646-6.013-7.15-10.433-13.686-10.433m36.273-6.419s-5.193-27.702-3.841-45.27C90.733 45.198 109.135 33 109.135 33s18.402 12.198 20.946 45.27c1.351 17.568-3.841 45.27-3.841 45.27H92.03z" stroke="#616161" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M126.236 123.54H92.034s-5.196-27.702-3.845-45.27C90.736 45.196 109.135 33 109.135 33s2.513 1.662 5.81 5.432c5.622 6.426 13.528 18.98 15.136 39.838 1.351 17.568-3.845 45.27-3.845 45.27zM109.81 63.405h17.568m-25.675 0h4.054" stroke="#616161" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M130.014 98.54c7.182 1.663 12.54 8.102 12.54 15.791 0 7.716-5.392 14.176-12.615 15.804a16.092 16.092 0 0 0-3.236-6.507M88.567 98.54c-7.182 1.663-12.54 8.102-12.54 15.791 0 7.716 5.392 14.176 12.615 15.804a16.092 16.092 0 0 1 3.236-6.507m-10.446-8.871c0-3.38 1.46-6.42 3.785-8.522m-2.312 14.153a11.444 11.444 0 0 1-1.043-2.508M63.865 47.865a6.08 6.08 0 1 1-12.162 0 6.08 6.08 0 1 1 12.162 0zm96.621 6.757a3.378 3.378 0 1 1-6.756 0 3.378 3.378 0 0 1 6.756 0zM84.135 35.703a2.703 2.703 0 1 1-5.406 0 2.703 2.703 0 0 1 5.406 0zm54.566 8.61l5.733-5.733m0 5.733L138.7 38.58M51.703 143.81H24m31.757 8.109H39.54m22.974 8.784h-9.46" stroke="#616161" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g></svg>
+                        <p class="text-align-center">
+                            Ingrese el monto y la dirección. Transfiere tus monedas y deja que la magia suceda.
+                        </p>
+
+                    </div>
+                    <div class="characteristic">
+                        <h3 class="text-align-center bold">Seguro</h3>
+                        <svg width="210" height="225" viewBox="0 0 210 225" xmlns="http://www.w3.org/2000/svg"><title>ic_Trusty</title><g fill="none" fill-rule="evenodd"><path d="M68.855 15L15 68.855" fill="#0EDA7C"/><path d="M68.855 15L15 68.855" stroke-opacity=".7" stroke="#F5F5F5" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/><path d="M126.687 29.458l-97.59 97.59" fill="#0EDA7C"/><path d="M126.687 29.458l-97.59 97.59" stroke-opacity=".7" stroke="#F5F5F5" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/><path d="M185.241 43.193l-102.65 102.65" fill="#0EDA7C"/><path d="M185.241 43.193l-102.65 102.65" stroke-opacity=".7" stroke="#F5F5F5" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/><path d="M194.639 106.084L91.265 209.458" fill="#0EDA7C"/><path d="M194.639 106.084L91.265 209.458" stroke-opacity=".7" stroke="#F5F5F5" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/><path stroke="#616161" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M103.066 88.613V77.785h45.636v49.502h-9.282"/><path d="M56.102 141.983H45.83a3.867 3.867 0 0 1-3.868-3.867V47.619a3.867 3.867 0 0 1 3.868-3.868h113.7a3.868 3.868 0 0 1 3.867 3.868v90.497a3.868 3.868 0 0 1-3.867 3.867h-20.11M123.95 25.961a6.96 6.96 0 0 1-6.961 6.962 6.96 6.96 0 0 1-6.961-6.962A6.96 6.96 0 0 1 116.989 19a6.96 6.96 0 0 1 6.961 6.961zm20.11-3.094a3.094 3.094 0 1 1-6.187 0 3.094 3.094 0 0 1 6.188 0zM175 172.923a3.867 3.867 0 1 1-7.735 0 3.867 3.867 0 0 1 7.735 0zm-24.939-11.802l6.562-6.563m.001 6.563l-6.562-6.563m13.336-89.149H55.884m98.232-10.055H84.503" stroke="#616161" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M58.204 56.9a3.094 3.094 0 1 1-6.188 0 3.094 3.094 0 0 1 6.188 0m10.056 0a3.094 3.094 0 1 1-6.188 0 3.094 3.094 0 0 1 6.188 0m10.055 0a3.094 3.094 0 1 1-6.188 0 3.094 3.094 0 0 1 6.188 0"/><path d="M56.657 55.354a3.094 3.094 0 1 1-6.188 0 3.094 3.094 0 0 1 6.188 0zm10.056 0a3.094 3.094 0 1 1-6.188 0 3.094 3.094 0 0 1 6.188 0zm10.055 0a3.094 3.094 0 1 1-6.188 0 3.094 3.094 0 0 1 6.188 0z" stroke="#616161" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M139.42 113.032V159s-1.052 9.8-13.15 20.884c-9.281 8.508-23.204 12.376-23.204 12.376s-13.056-3.628-22.315-11.587l-.007-.008c-7.843-9.05-8.617-16.25-8.617-16.25V112.59s22.431 3.868 36.354-10.828c9.66 10.202 23.42 11.455 30.939 11.27" fill="#10D078"/><path d="M70.385 168.405c1.957 3.346 4.94 7.323 9.477 11.479.294.263.588.526.882.781l.007.008c9.259 7.959 22.315 11.586 22.315 11.586s13.923-3.867 23.205-12.375C138.368 168.8 139.42 159 139.42 159v-45.968m0 0v-5.855s-22.431 3.867-36.354-10.83c-13.922 14.697-36.353 10.83-36.353 10.83V159m12.375-81.215H53.564m40.221 10.828H53.564m13.149 35.58h-13.15m13.15-9.281h-13.15M66.713 159H35m34.807 9.282h-17.79m26.298 10.055H67.486" stroke="#616161" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path stroke="#616161" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M86.436 166.348h32.487v-24.751H86.436zm5.028-32.486c0-6.194 5.022-11.216 11.216-11.216 6.194 0 11.215 5.022 11.215 11.216m0 .387v6.96"/><path d="M106.934 156.68a3.867 3.867 0 1 1-7.735 0 3.867 3.867 0 0 1 7.735 0zm-3.868-10.056v6.188" stroke="#616161" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g></svg>
+                        <p class="text-align-center">
+                            Somos un equipo con uno de los registros de seguimiento más largos del mercado de cifrado.
+                        </p>
+                    </div>
+                </div>         
+            </section>
+            
+            <section id="customers" class="customers">
+                <div class="container-cus">
+                    <h3 class="text-align-center white-color">Nuestros clientes nos aman</h3>
+                
+                    <div class="customers-opinions">
+                        <div class="ctrl-left">
+                            <i class="fa fa-chevron-left cursor-pointer"></i>
+                        </div>
+                        <div class="opinions">
+                            <div class="container-op">
+                                <div class="cus-perfil">
+                                    <div class="circle img-cus-container">
+                                        <img class="size-parent" src="http://simpleicon.com/wp-content/uploads/user1.png">
+                                    </div>
+                                    <b class="cus-name">Charlie Shrem</b>
+                                    <a class="twitter-rectangle">
+                                        <i class="fa fa-twitter"></i>
+                                        <p>Twitter</p>
+                                    </a>
+                                </div>
+                                <div class="cus-op">
+                                    <p class="op">I love how @Changelly_team has no limits and awesome fees when going from crypto to crypto. No reason for exchanges !</p>
+                                    <p class="date">February 25, 2017, 9:12 PM</p>
+                                </div>
+                            </div>
+                            
+                            <div class="container-op">
+                                <div class="cus-perfil">
+                                    <div class="circle img-cus-container">
+                                        <img class="size-parent" src="http://simpleicon.com/wp-content/uploads/user1.png">
+                                    </div>
+                                    <b class="cus-name">Charlie Shrem</b>
+                                    <a class="twitter-rectangle">
+                                        <i class="fa fa-twitter"></i>
+                                        <p>Twitter</p>
+                                    </a>
+                                </div>
+                                <div class="cus-op">
+                                    <p class="op">I love how @Changelly_team has no limits and awesome </p>
+                                    <p class="date">February 25, 2017, 9:12 PM</p>
+                                </div>
+                            </div>
+                            
+                            <div class="container-op">
+                                <div class="cus-perfil">
+                                    <div class="circle img-cus-container">
+                                        <img class="size-parent" src="http://simpleicon.com/wp-content/uploads/user1.png">
+                                    </div>
+                                    <b class="cus-name">Charlie Shrem</b>
+                                    <a class="twitter-rectangle">
+                                        <i class="fa fa-twitter"></i>
+                                        <p>Twitter</p>
+                                    </a>
+                                </div>
+                                <div class="cus-op">
+                                    <p class="op">Ie fees whennges !</p>
+                                    <p class="date">February 25, 2017, 9:12 PM</p>
+                                </div>
+                            </div>
+                            
+                            <div class="container-op">
+                                <div class="cus-perfil">
+                                    <div class="circle img-cus-container">
+                                        <img class="size-parent" src="http://simpleicon.com/wp-content/uploads/user1.png">
+                                    </div>
+                                    <b class="cus-name">Charlie Shrem</b>
+                                    <a class="twitter-rectangle">
+                                        <i class="fa fa-twitter"></i>
+                                        <p>Twitter</p>
+                                    </a>
+                                </div>
+                                <div class="cus-op">
+                                    <p class="op">I love how @Changelly_team has no limits and awesome fees when going from crypto to crypto. No reason for exchanges !</p>
+                                    <p class="date">February 25, 2017, 9:12 PM</p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="ctrl-right">
+                            <i class="fa fa-chevron-right cursor-pointer"></i>
+                        </div>
+                    </div>
+                    <div class="controls-slide">
+                        <div class="ctrl">
+                            <div class="mini-ctrl"></div>
+                        </div>
+                        <div class="ctrl">
+                            <div class="mini-ctrl"></div>
+                        </div>
+                        <div class="ctrl">
+                            <div class="mini-ctrl"></div>
+                        </div>
+                        <div class="ctrl">
+                            <div class="mini-ctrl"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="sign" class="container-fluid container-sign">
+                <div class="row">
+                    <div class="offset-md-2 col-md-8">
+                        <h2 class="text-align-center">Regístrate gratis</h2>
+                        <h4 class="text-align-center">para vender o comprar criptomonedas ahora</h4>
+                        <form id="formRegister" class="needs-validation" novalidate>
+                            <div class="form-group">
+                                <label for="txtEmail" class="form-textos-registro">Ingrese su email</label>
+                                
+                                <input id="txtEmail" type="email" class="form-control register" placeholder="nombre@ejemplo.com" required>
+                                <div class="invalid-feedback">
+                                  Debe ingresar un email.
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="txtPassword" class="form-textos-registro">Ingrese su contraseña</label>
+                                <input id="txtPassword" type="password" pattern=".{6,}" class="form-control register" required>
+                                <div class="invalid-feedback">
+                                    Debe tener como mínimo 6 caracteres.
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="txtPasswordRep" class="form-textos-registro">Repita su contraseña</label>
+                                <input id="txtPasswordRep" type="password" pattern=".{6,}" class="form-control register" required>
+                                <div id="repPassword" class="invalid-feedback">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="g-recaptcha" data-sitekey="6Lf97l0UAAAAAG7UhbZX_vf33ZNilVMylycWJ-rM"></div>
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-success btn-block btn-register" type="submit" id="btnRegistrar">Registrar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <div class="container-foot">
+                <p class="font-size-x17 text-align-center">Síguenos en nuestras redes sociales</p>
+                <div class="social-networks">
+                    <a><i class="fa fa-facebook"></i></a>
+                    <a><i class="fa fa-twitter"></i></a>
+                    <a><i class="fa fa-medium"></i></a>
+                    <a><i class="fa fa-google"></i></a>
+                    <a><i class="fa fa-github"></i></a>
+                    <a><i class="fa fa-comments"></i></a>
+                    <a><i class="fa fa-bitcoin"></i></a>
+                    <a><i class="fa fa-reddit"></i></a>
+                </div>
+                <div class="copyright">
+                    <a class="white-color">Términos de uso</a>
+                    <p>© 2018 Criptomonedas.com</p>
+                    <a class="white-color">Política de Privacidad</a>
+                </div>
+            </div>
+        </footer>
+        
+        <!-- Modal Ingresar -->
+        <div class="modal fade" id="mdlIngresar" tabindex="-1" role="dialog" aria-labelledby="mdlIngresar" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="mdlIngresar">Ingresar a cuenta</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="txtEmailIngresar">Email:</label>
+                                <input type="email" class="form-control" id="txtEmailIngresar" placeholder="Ingrese su email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="txtPasswordIngresar">Contraseña:</label>
+                                <input type="password" class="form-control" id="txtPasswordIngresar" placeholder="Ingrese su contraseña">
+                            </div>
+                        </form>
+                        <div id="errorLogin" class="alert alert-warning" role="alert" style="display: none;">
+                            Email o contraseña son incorrectos.
+                        </div>
+                        <div id="errorServidor" class="alert alert-warning" role="alert" style="display: none;">
+                            Ha ocurrido un problema en el servidor, intente mas tarde.
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-4">
+                                <a class="btn btn-block" href="/registrar.html">Obtener una cuenta</a>
+                            </div>
+                            <div class="col-sm-12 col-md-8">
+                                <button id="btnLogin" type="button" class="btn btn-block btn-success">Iniciar sesión</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- jQuery -->
+        <script src="vendors/jquery.min.js"></script>
+        
+        <!-- Sweet-Alert  -->
+        <script src="vendors/sweetalert/dist/sweetalert.min.js"></script>
+
+        <!-- Bootstrap -->
+        <script src="vendors/popper/popper.min.js"></script>
+        <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+
+        <script src="js/inicio.js"></script>
+        <script src="js/UsuarioBind.js"></script>
+        <script src="js/Usuario.js"></script>
+
+        <!-- Socket IO -->
+        <script src="socket.io/socket.io.js"></script>
+    </body>
+</html>

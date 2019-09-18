@@ -1,0 +1,30 @@
+{
+  "name": "criptomonedas-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "nodemon": "nodemon index.js"
+  },
+  "author": "Mendocode",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "jwt-simple": "^0.5.1",
+    "mercadopago": "^1.0.19",
+    "moment": "^2.22.2",
+    "mongoose": "^5.1.4",
+    "request": "^2.87.0",
+    "request-promise": "^4.2.2",
+    "socket.io": "^2.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.5"
+  }
+}

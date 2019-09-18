@@ -1,0 +1,3 @@
+function transferir(req, res) {
+	
+}

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Criptomonedas</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,300i,400,400i,700,700i" rel="stylesheet">
+    <link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/general.css" rel="stylesheet" type="text/css" />
+    <link href="css/header.css" rel="stylesheet" type="text/css" />
+    <link href="css/main.css" rel="stylesheet" type="text/css" />
+    <link href="css/panel.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="vendors/bootstrap/dist/css/bootstrap.min.css">
+    <!--alerts CSS -->
+    <link href="vendors/sweetalert/dist/sweetalert.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <header class="background-dark">
+        <nav class="navbar navbar-expand-lg menu navbar-dark bg-dark">
+            <a class="navbar-brand logo" href="/">
+                        <i class="icon-home fa fa-rocket"></i>
+                        Criptomonedas
+                    </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuDerecho" aria-controls="menuDerecho" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menuDerecho">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link font-weight-300" href="vender.html">¿Quieres vender?</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link border-r-small font-weight-300" href="comprar.html">¿Quieres comprar?</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a id="btnIngresar" data-toggle="modal" data-target="#mdlIngresar" class="nav-link font-weight-300" href="javascript:void(0)">Ingresar</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a id="btnRegister" class="nav-link font-weight-300" href="/registrar.html">Registrar</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a id="btnUsuario" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="javascript:void(0)">Panel de control</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#" id="btnCerrarSesion">Cerrar sesión</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section class="panel-option">
+        <div class="container">
+            <div class="table-option">
+                <div id="btnVenta" class="cell-table active">
+                    <i class="fa fa-area-chart"></i>
+                    <span>Venta</span>
+                </div>
+                <div id="btnCompra" class="cell-table">
+                    <i class="fa fa-shopping-cart"></i>
+                    <span>Compra</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <section id="section-venta">
+                    <div class="accordion" id="accordion">
+                        <div class="card">
+                            <div class="card-header" id="headingOne">
+                                <h5 class="mb-0 tit-venta">
+                                    <button class="btn btn-link btn-venta" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Ventas en proceso
+                                    </button>
+                                    <i id="btnInfoProceso" class="fa fa-question-circle-o icon-venta"  data-toggle="popover" title="Ventas en proceso" data-content="Son aquellas ventas que ya otro usuario ha hecho el depósito de dinero y esta esperando que usted haga la transferencia de la criptomoneda."></i>
+                                </h5>
+                            </div>
+                            <div id="collapseOne" class="collapse multi-collapse">
+                                <div class="card-body">
+                                    <table id="tblVentaEnProceso" class="table table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>Tipo</th>
+                                                <th>Cantidad</th>
+                                                <th>Precio</th>
+                                                <th>Fecha</th>
+                                                <th>Acciones</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="tbodyEnProceso">
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingTwo">
+                                <h5 class="mb-0 tit-venta">
+                                    <button class="btn btn-link btn-venta collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        Ventas en espera
+                                    </button>
+                                    <i id="btnInfoEspera" class="fa fa-question-circle-o icon-venta" title="Ventas en espera" data-content="Son aquellas ventas que ha publicado y todavía ningún usuario ha hecho alguna acción sobre ella."></i>
+                                </h5>
+                            </div>
+                            <div id="collapseTwo" class="collapse multi-collapse">
+                                <div class="card-body">
+                                    <table id="tblVentaEnEspera" class="table table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>Tipo</th>
+                                                <th>Cantidad</th>
+                                                <th>Precio</th>
+                                                <th>Fecha</th>
+                                                <th>Eliminar</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="tbodyEnEspera">
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                </section>
+                <section id="section-compra" style="display: none;">
+                    <div class="card">
+                        <div class="card-header" id="headingThree">
+                            <h5 class="mb-0 tit-venta">
+                                    <button class="btn btn-link btn-venta collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        Compras en Proceso
+                                    </button>
+                                    <i id="btnInfoCompraEnProceso" class="fa fa-question-circle-o icon-venta" title="Compra en proceso" data-content="Son aquellas compras que ha comprado y todavía el vendedor no ha hecho la transferencia de la criptomoneda."></i>
+                                </h5>
+                        </div>
+                        <div id="collapseThree" class="collapse multi-collapse">
+                            <div class="card-body">
+                                <table id="tblCompraEnProceso" class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Tipo</th>
+                                            <th>Cantidad</th>
+                                            <th>Precio</th>
+                                            <th>Fecha</th>
+                                            <th>Cancelar</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tbodyCompraEnProceso">
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingFour">
+                            <h5 class="mb-0 tit-venta">
+                                    <button class="btn btn-link btn-venta collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                        Compras Exitosas
+                                    </button>
+                                    <i id="btnInfoCompraExito" class="fa fa-question-circle-o icon-venta" title="Compra Exitosa" data-content="Son aquellas compras que ha comprado y el vendedor ya ha hecho la transferencia de la criptomoneda y ha sido depositado en su billetera."></i>
+                                </h5>
+                        </div>
+                        <div id="collapseFour" class="collapse multi-collapse">
+                            <div class="card-body">
+                                <table id="tblCompraEnProceso" class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Tipo</th>
+                                            <th>Cantidad</th>
+                                            <th>Precio</th>
+                                            <th>Fecha</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tbodyCompraEnProceso">
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+        <!-- jQuery -->
+        <script src="vendors/jquery.min.js"></script>
+        <!-- Bootstrap -->
+        <script src="vendors/popper/popper.min.js"></script>
+        <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+        <!-- Sweet-Alert  -->
+        <script src="vendors/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="js/inicio.js"></script>
+        <script src="js/UsuarioBind.js"></script>
+        <script src="js/Usuario.js"></script>
+        <script src="js/PanelBind.js"></script>
+        <script src="js/Panel.js"></script>
+</body>
+
+</html>

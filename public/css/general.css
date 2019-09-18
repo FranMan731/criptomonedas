@@ -1,0 +1,281 @@
+
+/*
+@font-face {
+    font-family: "Roboto";
+    src: url(../fonts/Roboto/Roboto-Bold.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url(../fonts/Roboto/Roboto-BoldItalic.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url(../fonts/Roboto/Roboto-Italic.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url(../fonts/Roboto/Roboto-Light.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url(../fonts/Roboto/Roboto-LightItalic.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url(../fonts/Roboto/Roboto-Regular.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url(../fonts/Roboto/Roboto-Thin.ttf) format("truetype");
+}
+*/
+html {
+    box-sizing: border-box !important;
+    font-size: 14px !important;
+}
+
+*,
+*:after,
+*:before {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+body{
+    width: 100vw !important;
+    font-family: "Roboto", sans-serif !important;
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+    color: white !important;
+}
+a.dropdown-item {
+    color: black !important;
+}
+
+a:hover {
+    text-decoration: none !important;
+    /*color: white !important;*/
+}
+
+h2{
+    font-size: 4.8rem;
+    font-weight: 100;
+}
+
+h4{
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+input{
+    font-family: "Roboto", sans-serif !important;
+    border: none;
+}
+
+input:focus{
+    outline: 0;
+}
+
+button{
+    font-family: "Roboto", sans-serif !important;
+}
+
+button:focus{
+    outline: 0;
+}
+
+/* Specials class*/
+.form-group {
+    margin: auto;
+    width: 70%;
+}
+
+.form-textos-registro {
+    text-align: left;
+    width: 100%;
+    font-size: 1.5em;
+    font-weight: 300;
+}
+
+.bg-dark {
+   background-color: transparent !important;
+   background: transparent !important;
+}
+
+.dropdown-menu {
+    padding: .5rem 0.6rem !important;
+}
+.subtitulo-texto {
+    font-size: 4.7rem !important;
+    font-weight: 100 !important;
+}
+
+.subtitulo-subtexto {
+    font-size: 1.6rem !important;
+    font-weight: 300 !important;
+    margin-bottom: 30px;
+}
+
+.total-width{
+    width: 100%;
+}
+
+.total-height{
+    height: 100%;
+}
+
+.white-color{
+    color: white;
+}
+
+.black-color{
+    color: black;
+}
+
+.border-r-small{
+    border-right: 1px solid rgba(225,225,225,.6);
+}
+
+.border-l-small{
+    border-left: 1px solid rgba(225,225,225,.6);
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.font-weight-300{
+    font-weight: 300;
+}
+
+.text-align-center{
+    text-align: center;
+}
+
+.font-size-x17{
+    font-size: 1.2rem;
+}
+
+.circle{
+    border-radius: 50%;
+}
+
+.size-parent{
+    width: 100%;
+    height: 100%;
+}
+
+.cursor-pointer{
+    cursor: pointer;
+}
+
+.green-color{
+    color: #10D078!important;
+}
+
+.padding-izq{
+    padding-left: 20px;
+}
+
+/* ----- circular button -------*/
+.circular-button{
+    position: relative;
+    padding: 10px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    
+    border: 1px solid #10D078;
+    font-size: 1.2rem;
+    font-weight: 500;
+    background-color: #2D3236;
+}
+
+.circular-button::after{
+    content: "PayPal";
+    height: 42px !important;
+
+    position: absolute;
+    top:-2%;
+    left: 100%;
+    border:inherit;
+    background-color: inherit;
+    padding: inherit;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.circular-button:hover{
+    box-shadow: 0 3px 10px 5px rgba(225,225,225,.3);
+}
+
+.circular-button:hover::after{
+    box-shadow: 9px 3px 10px 5px rgba(225,225,225,.3);
+}
+
+.background-grey{
+    background-color:#EDF2F1;
+}
+
+.background-dark{
+    background-image: none;
+    background-color: #102230;
+}
+/* ----- ---------- -------*/
+
+.twitter-rectangle{
+    display:flex;
+    justify-content:space-around;
+    align-items:center; 
+    width: 103px;
+    height: 35px;
+    background-color: #55ACEE;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+
+/*MODAL*/
+/* Form */
+#mdlIngresar .modal-body .form-group {
+    width: 100% !important;
+}
+/* Footer*/
+.modal-footer {
+    display: block !important;
+}
+
+.modal-footer a {
+    color: #007bff !important;
+}
+
+.modal-footer a:hover {
+    text-decoration: underline;
+}
+}
+
+@media(max-width:380px){
+    .subtitulo-texto {
+        font-size: 3.0rem !important;
+    }
+
+    .circular-button {
+        font-size: 1rem;
+    }
+
+    .circular-button::after {
+        height: 39px !important;
+    }
+}
